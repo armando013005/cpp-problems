@@ -1,0 +1,23 @@
+/*#include <bits/stdc++.h>
+using namespace std;
+struct objeto{
+    int pi;
+    int pj;
+    int d;
+
+}act, sig;
+queue <objeto> cola;
+int di[]={8,1,0,-1,0};
+int dj[]={8,0,1,0,-1};
+int mt[205];
+int main(){
+    int f,c,ac,af,t;
+    cin >> f >> c;
+    for(int i = 1; i <= f; i++){
+        for(int j = 1; j <=c; j++){
+            cin >> mt[i][j];
+        }
+    }
+    return 0;
+}
+*/
