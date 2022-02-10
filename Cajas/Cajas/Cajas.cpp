@@ -1,53 +1,38 @@
 /*******************************************************
 *   
 *   https://omegaup.com/arena/problem/OMI-2020-Cajas#problems
-*   61%
-*   
+*   100%
+*   (moroni)
 *********************************************************/
 
 #include <iostream>
-#include <vector>
-#include <algorithm>
-
+#include <queue>
 using namespace std;
-
-int v[1000000];
-
-int main() {
-    int n, ni;
+priority_queue<int>cajas, torres;
+int main()
+{
+    int n;
     cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> ni;
-        v[i] = ni;
+    for (int x = 0; x < n; x++) {
+        int aux;
+        cin >> aux;
+        cajas.push(-aux);
     }
-
-    sort(v, v + n);
-
-    vector <int> altura;
-    int columnas = 0;
-    int maxh = 1;
-    for (int i = 0; i < n; i++) {
-
-        if (altura.empty()) {
-            altura.push_back(1);
-            continue;
+    torres.push(0);
+    while (!cajas.empty()) {
+        if (torres.top() < cajas.top()) {
+            torres.push(0);
         }
-
-        for (int j = 0; j < altura.size(); j++) {
-
-            if (v[i] >= altura[j]) {
-                altura[j]++;
-                break;
+        else {
+            int aux = torres.top();
+            torres.pop();
+            while (!cajas.empty() && aux >= cajas.top()) {
+                aux--;
+                cajas.pop();
             }
-            else if (j == altura.size() - 1) {
-                altura.push_back(1);
-                break;
-            }
+            torres.push(aux);
         }
-
-
     }
-
-    cout << altura.size();
+    cout << torres.size();
     return 0;
 }
