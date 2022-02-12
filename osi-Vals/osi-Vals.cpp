@@ -26,6 +26,7 @@ int main() {
     if (((minimo / secuencia1) <= s) && ((minimo / secuencia2) <= si)) { noCansado = true; }
 
     if (t >= minimo && noCansado) {
+        cout << minimo << '\n';
         for (int i = 1; i <= (minimo / secuencia1); i++) {
             for (int j = 1; j < secuencia1; j++) {
                 cout << j << ' ';
