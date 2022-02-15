@@ -7,13 +7,12 @@
 #include <string>
 
 using namespace std;
-int buffer[1000];
+int buffer[10000];
 
 string digitos(string n) {
 	string x = "0";
 	if (n.size() > 1) {
 		int res = 0;
-
 		for (auto c : n) {
 			int num = c - '0';
 			res += num;
@@ -25,14 +24,12 @@ string digitos(string n) {
 			buffer[res] = res;
 			x = to_string(res);
 		}
-		
 		if (x.size() > 1) {
 			x = digitos(x);
 		}
-
 	}
 	else {
-		return n;
+		x = n;
 	}
 	return x;
 }
