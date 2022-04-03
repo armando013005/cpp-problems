@@ -2,7 +2,7 @@
 *   
 *   https://omegaup.com/arena/problem/OMI-2020-Cajas#problems
 *   100%
-*   (moroni)
+*   (moroni)-
 *********************************************************/
 
 #include <iostream>
