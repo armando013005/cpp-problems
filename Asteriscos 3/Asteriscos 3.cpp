@@ -2,7 +2,7 @@
 * 
 * https://omegaup.com/arena/OSI-2022-Previa/?fromLogin=#problems/Asteriscos-3
 * 100
-* 
+* --
 *******************************************************/
 
 #include<iostream>
